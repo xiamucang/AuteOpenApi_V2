@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd    http://www.springframework.org/schema/context    http://www.springframework.org/schema/context/spring-context-3.0.xsd    http://cxf.apache.org/jaxws     http://cxf.apache.org/schemas/jaxws.xsd    http://cxf.apache.org/jaxrs    http://cxf.apache.org/schemas/jaxrs.xsd">
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<!-- 定义服务器端服务地址以及对应的类 -->
+	<!-- <jaxws:endpoint id="NetMetaService" implementor="#netMetaService" address="/NetMetaService"/> -->
+	<!-- 定义服务器端服务地址以及对应的类-end -->
+	<jaxrs:server id="serviceContainer" address="/">
+		<jaxrs:serviceBeans>
+			<ref bean="netMetaService" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="utf8" value="utf8" />
+		</jaxrs:languageMappings>
+	</jaxrs:server>
+</beans>

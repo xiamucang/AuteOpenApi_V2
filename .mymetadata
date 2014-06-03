@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="AuteOpenApi_V2"
+  id="myeclipse.1401180768371"
+  context-root="/AuteOpenApi_V2"
+  j2ee-spec="6.0"
+  archive="AuteOpenApi_V2.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
